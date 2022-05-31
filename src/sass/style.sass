@@ -1,6 +1,11 @@
 $select_color_1: #1eacc7
 $select_color_2: #ff5656
 
+=btn_hover
+  &:hover
+    background-image: none
+    background-color: $select_color_1
+
 *
   font-family: 'Roboto', sans-serif
 
@@ -80,6 +85,7 @@ nav
     font-size: 14px
     font-weight: 400
     text-transform: uppercase
+    +btn_hover
 
 .promo
   min-height: 800px
@@ -127,6 +133,7 @@ nav
     font-size: 18px
     font-weight: 400
     text-transform: uppercase
+    +btn_hover
 
 .section_name
   width: 112px
@@ -235,6 +242,26 @@ nav
       bottom: 35px
       left: 50%
       transform: translateX(-50%)
+      &:before
+        content: ''
+        display: block
+        width: 14px
+        height: 2px
+        background-color: $select_color_1
+        transition: 0.5s all
+      &:after
+        content: ''
+        display: block
+        width: 2px
+        height: 14px
+        background-color: $select_color_1
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        transition: 0.5s all
+      &:hover
+        &:after, &:before
+          background-color: $select_color_2
 
 .section_subheader
   margin: 0 auto

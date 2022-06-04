@@ -311,3 +311,51 @@ nav
       bottom: 138px
       left: 50%
       transform: translateX(-50%)
+
+.terms
+  padding: 68px 8px 50px 8px
+
+  &_item
+    width: 478px
+    margin: 33px 0
+
+    &_header
+      font-size: 22px
+      font-weight: 400
+      color: $select_color_1
+
+    &_list
+      font-size: 17px
+      font-weight: 300
+      color: #222222
+      line-height: 22px
+
+      ul
+        margin-top: 10px
+        list-style: none
+        padding: 0 0 0 50px
+
+        li
+          position: relative
+          margin-bottom: 10px
+
+        li:before
+          content: ""
+          display: inline-block
+          position: absolute
+          left: -31px
+          top: 3px
+          width: 21px
+          height: 20px
+          background: url('../icons/check_blue.svg') center (center / cover) no-repeat
+
+    &_descr
+      font-size: 17px
+      font-weight: 400
+      color: $select_color_1
+
+  .selected
+    .terms_item_header
+      color: $select_color_2
+    li:before
+      background: url('../icons/check_red.svg') center (center / cover) no-repeat
